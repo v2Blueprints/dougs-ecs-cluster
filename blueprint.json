@@ -1,0 +1,41 @@
+{
+	"identifier": "dougs-ecs-clutser",
+	"about": {
+		"title": "Dougs Cluster",
+		"explanation": "Define Dougs cluser"
+	},
+	"binding_target": {
+		"configuration": {
+			"name": "binding_identifier"
+		}
+	},
+	"bindings": [
+		{
+			"target": {
+				"repository": "https://github.com/v2Blueprints/aws-ecs-cluster"
+			},
+			"configuration": {
+				"Name": "Dougs-Cluster"
+			}
+		},
+		{
+			"target": {
+				"type": "embed",
+				"repository": "https://github.com/v2Blueprints/aws-cloudwatch-log-group"
+			},
+			"configuration": {
+				"name" : "Dougs-cluster-logs"
+			}
+		},
+		{
+			"target": {
+				"type": "embed",
+				"repository": "https://github.com/v2Blueprints/aws-kms-key"
+			},
+			"configuration": {
+				"description": "cluster-key",
+				"deletion_window_in_days": 10
+			}
+		}
+	]
+}
